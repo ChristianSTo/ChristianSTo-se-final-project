@@ -1,0 +1,109 @@
+.nav {
+  position: fixed;
+  top: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 75px;
+  background-color: #0e1a32;
+  margin: 0px;
+  padding: 0px;
+  z-index: 2;
+}
+
+.nav__img {
+  width: 40px;
+  height: 40px;
+  margin: 0px auto;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  gap: 1px;
+  list-style: none;
+}
+
+.nav__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin: 0px auto;
+  padding: 0px;
+  gap: 10px;
+}
+
+.nav__title {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  text-align: left;
+  color: #fff;
+  width: 30px;
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+}
+
+.nav__img {
+  width: 65px;
+  height: 65px;
+}
+
+.nav__item-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  background-color: aliceblue;
+  width: 150px;
+  height: 75px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav__item-button:hover {
+  cursor: pointer;
+  color: aliceblue;
+  background-color: #0e2332;
+}
+
+.nav__status {
+  margin: 0px auto;
+}
+
+.nav__sign-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  margin: 0px;
+  padding: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #0e1a32;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.nav__sign-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}

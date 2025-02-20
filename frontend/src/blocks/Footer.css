@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #0e1a32;
+  color: #fff;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer__band {
+  width: 100vw;
+  height: 75px;
+  color: #fff;
+  margin: 0px;
+  padding: 0px;
+  background: url("../assets/newsIcon.svg") repeat-x;
+  background-size: 50px 50px;
+  background-color: #0e1a32;
+  animation: scroll 25s linear infinite;
+}
+
+.footer__text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 50px auto 80px;
+}
+
+@keyframes scroll {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}

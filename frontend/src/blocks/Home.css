@@ -1,0 +1,84 @@
+.home {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 25px;
+  background: linear-gradient(rgba(14, 26, 50, 0.25), rgba(14, 35, 50, 0.25)),
+    url("../assets/chicagoPhoto.jpg") center no-repeat transparent;
+  background-size: 110%;
+  background-color: #0e2332;
+  animation: scroll 20s infinite alternate-reverse linear;
+}
+
+.home__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+  margin: 0px auto 100px;
+  padding: 0px;
+  z-index: 1;
+}
+
+.home__image {
+  width: 600px;
+  height: 100px;
+  margin: 200px auto 0px;
+}
+
+.home__search-bar {
+  width: 600px;
+  height: 100px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 52px;
+  margin: 0px auto 80px;
+  padding: 25px 33px;
+  border: none;
+  border-radius: 25px;
+}
+
+.home__search-bar:focus {
+  outline: none;
+}
+
+.home__background-band {
+  /* refactor */
+  display: none;
+  position: absolute;
+  top: 300px;
+  left: -25px;
+  width: 1000px;
+  height: 50px;
+  background-color: #000;
+  background: url("../assets/newsIcon.svg") repeat-x transparent;
+  background-size: 100px 100px;
+  transform: rotate(-45deg);
+  transform-origin: left center;
+  z-index: 0;
+  animation: scroll 10s linear infinite;
+}
+
+.home__paragraph {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0px auto 50px;
+}
+
+@keyframes scroll {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
