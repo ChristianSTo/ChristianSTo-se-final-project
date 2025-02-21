@@ -12,7 +12,7 @@ function Bookmarked({
 
   return (
     <section className="bookmarked">
-      <h2 className="bookmarked__title">Welcome, {userName}</h2>
+      <h2 className="bookmarked__title">Welcome.</h2>
       <>
         {bookMarkedArticles.length === 0 ? (
           <p className="bookmarked__results">

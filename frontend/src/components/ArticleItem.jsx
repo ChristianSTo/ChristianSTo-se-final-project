@@ -42,7 +42,11 @@ function ArticleItem({
           bookMarkItem(evt, article);
         }}
       ></button>
-      <img className="article-item__image" src={article.urlToImage}></img>
+      <img
+        className="article-item__image"
+        src={article.urlToImage}
+        alt={article.title}
+      ></img>
       <p className="article-item__title">{article.title}</p>
       <p className="article-item__description">{article.description}</p>
       <div className="article-item__subcontainer">

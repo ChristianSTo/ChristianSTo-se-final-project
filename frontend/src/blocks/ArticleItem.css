@@ -28,7 +28,7 @@
   right: 15px;
   width: 30px;
   height: 60px;
-  background: url("../assets/bookMarkPlus.svg") center no-repeat #fff;
+  background: url("../assets/bookMarkPlus.svg") center no-repeat transparent;
   background-size: contain;
   border: none;
   z-index: 1;
@@ -42,31 +42,35 @@
 }
 
 .article-item__image {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 240px;
   border-radius: 25px 25px 0px 0px;
 }
 
 .article-item__title {
-  font-family: garamond;
-  /* need refactoring fonts */
-  width: 380px;
+  font-family: "Times New Roman", Times, serif;
   font-size: 24px;
+  width: 100%;
+  max-width: 380px;
   color: #000;
   margin: 15px auto 0px;
   padding: 0px;
 }
 
 .article-item__description {
-  width: 380px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 14px;
+  width: 100%;
+  max-width: 380px;
   color: #000;
   margin: 10px auto 0px;
   padding: 0px;
 }
 
 .article-item__subcontainer {
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -76,9 +80,47 @@
 }
 
 .article-item__subtext {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 10px;
+  text-align: left;
   max-width: 128px;
   width: 100%;
-  font-size: 10px;
   color: #000;
-  text-align: left;
+  margin: 0px;
+}
+
+@media screen and (max-width: 850px) {
+  .article-item {
+    height: 300px;
+    width: 220px;
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .article-item__bookmark {
+    width: 20px;
+    height: 50px;
+  }
+
+  .article-item__image {
+    height: 120px;
+  }
+
+  .article-item__title {
+    font-size: 16px;
+    margin: 10px 5px 0px;
+  }
+
+  .article-item__description {
+    font-size: 10px;
+  }
+
+  .article-item__subcontainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .article-item__subtext {
+    font-size: 8.75px;
+  }
 }

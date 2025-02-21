@@ -17,7 +17,11 @@ function Home({
     <>
       <section className="home">
         <div className="home__container">
-          <img className="home__image" src={chicagoSkyline}></img>
+          <img
+            className="home__image"
+            src={chicagoSkyline}
+            alt="chicagoSkyline"
+          ></img>
           <input
             className="home__search-bar"
             placeholder="Search Chicago News"

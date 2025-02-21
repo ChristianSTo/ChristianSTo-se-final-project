@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home.jsx";
 import About from "./components/About.jsx";
@@ -75,6 +75,7 @@ function App() {
           }
         />
       </Routes>
+
       <Footer />
     </div>
   );
