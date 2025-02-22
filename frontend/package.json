@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://ChristianSTo.github.io/ChristianSTo-se_final_project/stage-1-frontend-api",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
