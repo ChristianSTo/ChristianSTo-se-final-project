@@ -17,6 +17,7 @@ https://christiansto.github.io/ChristianSTo-se_final_project/
 ```
 git clone git@github.com:ChristianSTo/ChristianSTo-se_final_project.git
 cd ChristianSTo-se_final_project
+git checkout stage-1-frontend-api
 npm install
 npm run dev
 ```
