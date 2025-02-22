@@ -3,15 +3,15 @@ import "../blocks/Bookmarked.css";
 import ArticleItem from "./ArticleItem";
 
 function Bookmarked({
-  userName,
   bookMarkedArticles,
   isBookMarked,
   bookMarkItem,
+  isSignedIn,
 }) {
   const [isHover, setIsHover] = useState(null);
 
   return (
-    <section className="bookmarked">
+    <main className="bookmarked">
       <h2 className="bookmarked__title">Welcome.</h2>
       <>
         {bookMarkedArticles.length === 0 ? (
@@ -47,13 +47,14 @@ function Bookmarked({
                   isBookMarked={isBookMarked}
                   bookMarkItem={bookMarkItem}
                   bookMarkedArticles={bookMarkedArticles}
+                  isSignedIn={isSignedIn}
                 />
               );
             })}
           </ul>
         )}
       </>
-    </section>
+    </main>
   );
 }
 

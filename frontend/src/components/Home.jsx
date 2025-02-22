@@ -7,6 +7,7 @@ function Home({
   addBookMarkArticle,
   isBookMarked,
   bookMarkItem,
+  isSignedIn,
 }) {
   const [searchValue, setSearchValue] = useState("");
   const changeInput = (evt) => {
@@ -14,8 +15,8 @@ function Home({
   };
 
   return (
-    <>
-      <section className="home">
+    <main className="home">
+      <section className="home__section">
         <div className="home__container">
           <img
             className="home__image"
@@ -36,8 +37,9 @@ function Home({
         addBookMarkArticle={addBookMarkArticle}
         isBookMarked={isBookMarked}
         bookMarkItem={bookMarkItem}
+        isSignedIn={isSignedIn}
       />
-    </>
+    </main>
   );
 }
 

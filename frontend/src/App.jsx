@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home.jsx";
@@ -14,10 +14,11 @@ function App() {
   const [isBookMarked, setIsBookMarked] = useState(false);
   const bookMarkItem = (evt, article) => {
     evt.stopPropagation();
-    setIsBookMarked((prev) => !prev);
-    addBookMarkArticle(article);
+    if (isSignedIn) {
+      setIsBookMarked((prev) => !prev);
+      addBookMarkArticle(article);
+    }
   };
-
   // lift up states to top parent with function method
   const [bookMarkedArticles, setBookMarkedArticles] = useState([]);
   const addBookMarkArticle = (article) => {
@@ -31,7 +32,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <main className="app">
       <Nav signedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />
       <Routes>
         <Route
@@ -42,6 +43,7 @@ function App() {
               addBookMarkArticle={addBookMarkArticle}
               bookMarkItem={bookMarkItem}
               isBookMarked={isBookMarked}
+              isSignedIn={isSignedIn}
             />
           }
         />
@@ -54,6 +56,7 @@ function App() {
                 bookMarkedArticles={bookMarkedArticles}
                 bookMarkItem={bookMarkItem}
                 isBookMarked={isBookMarked}
+                isSignedIn={isSignedIn}
               />
             </ProtectedRoute>
           }
@@ -77,7 +80,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </div>
+    </main>
   );
 }
 

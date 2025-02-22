@@ -10,6 +10,7 @@ function Article({
   bookMarkedArticles,
   isBookMarked,
   bookMarkItem,
+  isSignedIn,
 }) {
   const [articles, setArticles] = useState([]);
   // show articles based on current search bar
@@ -101,6 +102,7 @@ function Article({
                   addBookMarkArticle={addBookMarkArticle}
                   isBookMarked={isBookMarked}
                   bookMarkItem={bookMarkItem}
+                  isSignedIn={isSignedIn}
                 />
               );
             })}

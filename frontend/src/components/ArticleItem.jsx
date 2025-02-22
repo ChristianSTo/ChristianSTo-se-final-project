@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "../blocks/ArticleItem.css";
 import bookMarkPlusImg from "../assets/bookMarkPlus.svg";
 import bookMarkRemoveImg from "../assets/bookMarked.svg";
@@ -11,7 +11,10 @@ function ArticleItem({
   setIsHover,
   bookMarkedArticles,
   bookMarkItem,
+  isSignedIn,
 }) {
+  const timeoutRef = useRef(null);
+  const [isWarnVisible, setIsWarnVisible] = useState(false);
   const isBookMarked = bookMarkedArticles.some(
     (item) => item.url === article.url
   );
@@ -22,6 +25,20 @@ function ArticleItem({
     }")`,
     opacity: isBookMarked ? "1" : "",
   };
+
+  const handleUnauthorizedBookmark = () => {
+    if (!isSignedIn) {
+      setIsWarnVisible(true);
+    }
+    timeoutRef.current = setTimeout(() => setIsWarnVisible(false), 2750);
+  };
+  const warnStyle = {
+    display: isWarnVisible ? "block" : "none",
+  };
+
+  useEffect(() => {
+    return () => clearTimeout(timeoutRef.current);
+  }, []);
 
   return (
     <li
@@ -39,9 +56,14 @@ function ArticleItem({
         className="article-item__bookmark"
         style={bookMarkStyle}
         onClick={(evt) => {
+          handleUnauthorizedBookmark();
           bookMarkItem(evt, article);
         }}
-      ></button>
+      >
+        <span className="article-item__warn" style={warnStyle}>
+          sign in to access bookmark
+        </span>
+      </button>
       <img
         className="article-item__image"
         src={article.urlToImage}

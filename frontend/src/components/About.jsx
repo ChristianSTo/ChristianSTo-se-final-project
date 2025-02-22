@@ -3,7 +3,7 @@ import chicagoNewsLogo from "../assets/profilePicture.jpg";
 
 function About() {
   return (
-    <section className="about">
+    <main className="about">
       <img
         className="about__img"
         src={chicagoNewsLogo}
@@ -20,7 +20,7 @@ function About() {
           team events. His teams each won an award.
         </p>
       </div>
-    </section>
+    </main>
   );
 }
 

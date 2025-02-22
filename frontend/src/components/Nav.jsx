@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../blocks/Nav.css";
 import chicagoNewsLogo from "../assets/navbarIcon.svg";
 
-function Nav({ signedIn, setIsSignedIn }) {
+function Nav({ signedIn, setIsSignedIn, setWarnStyle }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const displayNav = () => {
