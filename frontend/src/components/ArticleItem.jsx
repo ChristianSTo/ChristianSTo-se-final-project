@@ -33,7 +33,7 @@ function ArticleItem({
     timeoutRef.current = setTimeout(() => setIsWarnVisible(false), 2750);
   };
   const warnStyle = {
-    display: isWarnVisible ? "block" : "none",
+    display: isSignedIn ? "none" : isWarnVisible ? "block" : "none",
   };
 
   useEffect(() => {
