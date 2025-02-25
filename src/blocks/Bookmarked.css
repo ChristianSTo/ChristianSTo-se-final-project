@@ -1,0 +1,79 @@
+.bookmarked {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+}
+
+.bookmarked__title {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2.5px;
+  color: #fff;
+  width: 100%;
+  margin: 160px auto 50px;
+  padding: 0px;
+}
+
+.bookmarked__results {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2.5px;
+  color: #fff;
+  margin: 80px auto 50px;
+}
+
+.bookmarked__grid {
+  width: 100%;
+  max-width: 1250px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  align-content: start;
+  list-style: none;
+  gap: 0px;
+  margin: 0px auto 25px;
+  padding: 15px;
+  gap: 5px;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 1240px) {
+  .bookmarked__grid {
+    max-width: 840px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .bookmarked__title {
+    font-size: 16px;
+  }
+
+  .bookmarked__results {
+    font-size: 16px;
+    margin: 40px auto 25px;
+  }
+
+  .bookmarked__grid {
+    max-width: 690px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    margin: 0px auto;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .bookmarked__grid {
+    max-width: 455px;
+  }
+}

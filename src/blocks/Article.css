@@ -1,0 +1,99 @@
+.article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.article__results {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  color: #fff;
+  margin: 80px auto 50px;
+}
+
+.article__news-grid {
+  width: 100%;
+  max-width: 1250px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  align-content: start;
+  list-style: none;
+  margin: 0px auto 25px;
+  padding: 15px;
+  gap: 5px;
+  border-radius: 25px;
+}
+
+.article__news-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.article__news-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  margin: 20px auto 50px;
+  padding: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #0e1a32;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.article__news-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+@media screen and (max-width: 1240px) {
+  .article__news-grid {
+    max-width: 840px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .article__results {
+    font-size: 16px;
+    margin: 40px auto 25px;
+  }
+
+  .article__news-grid {
+    max-width: 690px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    margin: 0px auto;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .article__news-grid {
+    max-width: 455px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .article__news-grid {
+    max-width: 255px;
+  }
+}
