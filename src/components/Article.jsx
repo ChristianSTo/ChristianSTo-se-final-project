@@ -60,14 +60,15 @@ function Article({
   return (
     <section className="article">
       {showedArticles.length === 0 ? (
-        <p className="article__results">Nothing found...</p>
+        // conditional h1
+        <h1 className="article__results">Nothing found...</h1>
       ) : (
         <>
           <>
             {searchValue ? (
-              <p className="article__results">Search results:</p>
+              <h1 className="article__results">Search results:</h1>
             ) : (
-              <p className="article__results">Recommended news:</p>
+              <h1 className="article__results">Recommended news:</h1>
             )}
           </>
 
