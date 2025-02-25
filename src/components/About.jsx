@@ -11,7 +11,7 @@ function About() {
       ></img>
 
       <div className="about__container">
-        <h2 className="about__title">About the Author</h2>
+        <h1 className="about__title">About the Author</h1>
         <p className="about__paragraph">
           Christian is a Software Engineer has keen experience in developing and
           designing web appications. His knowledge and skills in JavaScript,
