@@ -23,11 +23,13 @@ function Home({
             src={chicagoSkyline}
             alt="chicagoSkyline"
           ></img>
-          <input
-            className="home__search-bar"
-            placeholder="Search Chicago News"
-            onChange={changeInput}
-          ></input>
+          <form className="home__form">
+            <input
+              className="home__search-bar"
+              placeholder="Search Chicago News"
+              onChange={changeInput}
+            ></input>
+          </form>
         </div>
         <div className="home__background-band"></div>
       </section>

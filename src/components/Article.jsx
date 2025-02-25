@@ -58,7 +58,7 @@ function Article({
   }, [articleAmount, showedArticles]);
 
   return (
-    <>
+    <section className="article">
       {showedArticles.length === 0 ? (
         <p className="article__results">Nothing found...</p>
       ) : (
@@ -127,7 +127,7 @@ function Article({
           </div>
         </>
       )}
-    </>
+    </section>
   );
 }
 

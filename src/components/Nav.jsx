@@ -11,7 +11,7 @@ function Nav({ signedIn, setIsSignedIn, setWarnStyle }) {
   };
 
   return (
-    <section className="nav">
+    <nav className="nav">
       <div className="nav__logo">
         <img
           className="nav__img"
@@ -59,7 +59,7 @@ function Nav({ signedIn, setIsSignedIn, setWarnStyle }) {
         className="nav__burger-button"
         onClick={displayNav}
       ></button>
-    </section>
+    </nav>
   );
 }
 
