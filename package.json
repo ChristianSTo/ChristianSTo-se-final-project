@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ChristianSTo.github.io/ChristianSTo-se_final_project/",
+  "homepage": "https://ChristianSTo.github.io/ChristianSTo-se-final-project/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
