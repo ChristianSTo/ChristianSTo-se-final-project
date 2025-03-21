@@ -23,7 +23,7 @@ JavaScript and React
 Deployed on gh-pages
 
 <h2>Live GH-pages</h2>
-[https://christiansto.github.io/ChristianSTo-se-final-project/](https://christiansto.github.io/ChristianSTo-se-final-project/)
+https://christiansto.github.io/ChristianSTo-se-final-project/
 
 <h2>Run it locally</h2>
 
